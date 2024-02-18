@@ -63,7 +63,7 @@ public class TestRun {
 	@Test(groups = "@regression", priority = 5,dependsOnMethods = "VT003CreateMarketingAccount")
 	public void VT005DeleteMarketingACC() {
 		ut.createTestReport("VT005DeleteMarketingACC");
-		WebDriver drievr = ut.getDriver("edge");
+		WebDriver drievr = ut.getDriver("firefox");
 		DeleteMarketing_ACC deltemrkacc = new DeleteMarketing_ACC(ut, drievr);
 		deltemrkacc.deleteMarketingACC();
 	}
