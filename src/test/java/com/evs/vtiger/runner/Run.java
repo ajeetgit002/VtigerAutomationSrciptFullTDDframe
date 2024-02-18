@@ -22,7 +22,7 @@ public class Run {
 	@Test(dataProvider = "credential", dataProviderClass = DataPrividers.class)
 	public void runTest(String username, String password) {
 		ut.createTestReport("VT001VerifyDataDrivev");
-		WebDriver driver = ut.getDriver("chrome");
+		WebDriver driver = ut.getDriver("firefox");
 		CommonPageOR or = new CommonPageOR(driver);
 		ut.openUrl("http://localhost:8888");
 		ut.inputValue(or.getUsernameTB(), username);

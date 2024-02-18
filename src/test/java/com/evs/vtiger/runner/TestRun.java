@@ -26,7 +26,7 @@ public class TestRun {
 	@Test(groups = { "@Login", "@Smoke" }, priority = 0)
 	public void VT001CredentialVerification() {
 		ut.createTestReport("VT001CredentialVerification");
-		WebDriver drievr = ut.getDriver("chrome");
+		WebDriver drievr = ut.getDriver("firefox");
 		Login_Logout loginout = new Login_Logout(ut, drievr);
 		loginout.userLogin_Logout();
 	}
@@ -43,7 +43,7 @@ public class TestRun {
 	@Test(groups = "@sanity", priority = 2)
 	public void VT002CreateNewSalesLeads() {
 		ut.createTestReport("VT002CreateNewSalesLeads");
-		WebDriver drievr = ut.getDriver("chrome");
+		WebDriver drievr = ut.getDriver("firefox");
 		CreateNew_SalesLeadsScript crnsalesleads = new CreateNew_SalesLeadsScript(ut, drievr);
 		crnsalesleads.createNewLeads();
 	}
@@ -51,7 +51,7 @@ public class TestRun {
 	@Test(groups = "@regression", priority = 1)
 	public void VT003CreateMarketingAccount() {
 		ut.createTestReport("VT003CreateMarketingAccount");
-		WebDriver driver = ut.getDriver("chrome");
+		WebDriver driver = ut.getDriver("firefox");
 
 		CreateNew_Account cretnewacc = new CreateNew_Account(ut, driver);
 		cretnewacc.createNewACC();
