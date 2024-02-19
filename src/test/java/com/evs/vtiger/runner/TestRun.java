@@ -26,7 +26,7 @@ public class TestRun {
 	@Test(groups = { "@Login", "@Smoke" }, priority = 0)
 	public void VT001CredentialVerification() {
 		ut.createTestReport("VT001CredentialVerification");
-		WebDriver drievr = ut.getDriver("chrome");
+		WebDriver drievr = ut.getDriver("firefox");
 		Login_Logout loginout = new Login_Logout(ut, drievr);
 		loginout.userLogin_Logout();
 	}
@@ -34,7 +34,7 @@ public class TestRun {
 	@Test(groups = "@sanity", priority = 3,dependsOnMethods = "VT003CreateMarketingAccount")
 	public void VT004supportsAccountVerify() {
 		ut.createTestReport("VT004supportsAccountVerify");
-		WebDriver drievr = ut.getDriver("chrome");
+		WebDriver drievr = ut.getDriver("firefox");
 		SupportsAccVerify s = new SupportsAccVerify(ut, drievr);
 		s.supportsAccountVerify();
 
@@ -43,7 +43,7 @@ public class TestRun {
 	@Test(groups = "@sanity", priority = 2)
 	public void VT002CreateNewSalesLeads() {
 		ut.createTestReport("VT002CreateNewSalesLeads");
-		WebDriver drievr = ut.getDriver("chrome");
+		WebDriver drievr = ut.getDriver("firefox");
 		CreateNew_SalesLeadsScript crnsalesleads = new CreateNew_SalesLeadsScript(ut, drievr);
 		crnsalesleads.createNewLeads();
 	}
@@ -51,7 +51,7 @@ public class TestRun {
 	@Test(groups = "@regression", priority = 1)
 	public void VT003CreateMarketingAccount() {
 		ut.createTestReport("VT003CreateMarketingAccount");
-		WebDriver driver = ut.getDriver("chrome");
+		WebDriver driver = ut.getDriver("firefox");
 
 		CreateNew_Account cretnewacc = new CreateNew_Account(ut, driver);
 		cretnewacc.createNewACC();
@@ -63,7 +63,7 @@ public class TestRun {
 	@Test(groups = "@regression", priority = 5,dependsOnMethods = "VT003CreateMarketingAccount")
 	public void VT005DeleteMarketingACC() {
 		ut.createTestReport("VT005DeleteMarketingACC");
-		WebDriver drievr = ut.getDriver("chrome");
+		WebDriver drievr = ut.getDriver("firefox");
 		DeleteMarketing_ACC deltemrkacc = new DeleteMarketing_ACC(ut, drievr);
 		deltemrkacc.deleteMarketingACC();
 	}
@@ -71,7 +71,7 @@ public class TestRun {
 	@Test(groups = "@sanity", priority = 4,dependsOnMethods  = "VT002CreateNewSalesLeads")
 	public void VT006DeleteSalesLead() {
 		ut.createTestReport("VT006DeleteSalesLead");
-		WebDriver drievr = ut.getDriver("chrome");
+		WebDriver drievr = ut.getDriver("firefox");
 		DeleteSalesLeads deltemrkacc = new DeleteSalesLeads(ut, drievr);
 		deltemrkacc.deleteSalesLeads();
 	}
